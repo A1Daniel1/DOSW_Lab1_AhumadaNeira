@@ -13,3 +13,13 @@ public class CarreraParalela {
         System.out.println("Máximo: " + maximo);
     }
 }
+
+public static int obtenerMinimo(List<Integer> numeros) {
+    return numeros.stream()
+            .min(Integer::compareTo)
+            .orElse(0);
+}
+
+public static int obtenerCantidad(List<Integer> numeros) {
+    return numeros.size();
+}
