@@ -6,13 +6,22 @@ public class CarreraParalela {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        int maximo = obtenerMaximo(numeros);
-        int minimo = obtenerMinimo(numeros);
-        int cantidad = obtenerCantidad(numeros);
+        CarreraParalela carrera = new CarreraParalela();
+        carrera.calcularLista(numeros);
+    }
 
-        System.out.println("Número máximo: " + maximo);
-        System.out.println("Número mínimo: " + minimo);
-        System.out.println("Cantidad de números: " + cantidad);
+
+    /***
+     * metodo para calcular el maximo, minimo y cantidad de numeros en una lista
+     * @param numeros lista de numeros
+     */
+    public void calcularLista(List<Integer> numeros) {
+        List<Integer> resultado = Arrays.asList(
+            obtenerMaximo(numeros),
+            obtenerMinimo(numeros),
+            obtenerCantidad(numeros));
+
+        System.out.println("Resultados: " + resultado);
     }
 
     /***
@@ -44,5 +53,16 @@ public class CarreraParalela {
      */
     public static int obtenerCantidad(List<Integer> numeros) {
         return numeros.size();
+    }
+
+    /**
+     * metodo para verificar si el numero mayor es par
+     * @param numero numero a verificar
+     * @return si es par o impar
+     */
+
+    public void esPar(int numero) {
+        String resultado = (numero % 2 == 0) ? "Es par" : "Es impar";
+        System.out.println(resultado);
     }
 }
