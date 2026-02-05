@@ -12,13 +12,21 @@ public class CarreraParalela {
         System.out.println("La cantidad de números es par: " + esPar);
     }
 
+    /***
+     * metodo para analizar una lista de numeros y devolver un objeto Resultado
+     * @param numeros lista de numeros
+     * @return objeto Resultado con los datos calculados
+     */
     public static Resultado analizar(List<Integer> numeros) {
-    int max = obtenerMaximo(numeros);
-    int min = obtenerMinimo(numeros);
-    int cant = obtenerCantidad(numeros);
-    
-    return new Resultado(max, min, cant);
-}
+        int max = obtenerMaximo(numeros);
+        int min = obtenerMinimo(numeros);
+        int cant = obtenerCantidad(numeros);
+        
+        Resultado resultado = new Resultado(max, min, cant);
+        resultado.setMayorEsMultiploDe2(max % 2 == 0 ? true : false);
+        
+        return resultado;
+    }
 
 
 
