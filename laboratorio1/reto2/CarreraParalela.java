@@ -25,8 +25,9 @@ public class CarreraParalela {
         Resultado resultado = new Resultado(max, min, cant);
         resultado.setMayorEsMultiploDe2(max % 2 == 0 ? true : false);
         resultado.setMayorEsDivisorDe2(2 % max == 0 ? true : false);
-
         resultado.setCantidadEsImpar(cant % 2 != 0 ? true : false);
+        resultado.setCantidadEsPar(cant % 2 == 0 ? true : false);
+
         
         return resultado;
     }
