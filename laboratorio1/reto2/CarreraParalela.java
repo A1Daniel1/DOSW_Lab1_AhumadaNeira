@@ -13,13 +13,13 @@ public class CarreraParalela {
     }
 
     public static Resultado analizar(List<Integer> numeros) {
-        int max = obtenerMaximo(numeros);
-        int min = obtenerMinimo(numeros);
-        int cant = obtenerCantidad(numeros);
+    int max = obtenerMaximo(numeros);
+    int min = obtenerMinimo(numeros);
+    int cant = obtenerCantidad(numeros);
     
-        Resultado resultado = new Resultado(max, min, cant);
-        return resultado;
-    }
+    return new Resultado(max, min, cant);
+}
+
 
 
     /***
