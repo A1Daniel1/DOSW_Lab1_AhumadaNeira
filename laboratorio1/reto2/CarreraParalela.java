@@ -12,7 +12,14 @@ public class CarreraParalela {
         System.out.println("La cantidad de números es par: " + esPar);
     }
 
-
+    public static Resultado analizar(List<Integer> numeros) {
+        int max = obtenerMaximo(numeros);
+        int min = obtenerMinimo(numeros);
+        int cant = obtenerCantidad(numeros);
+    
+        Resultado resultado = new Resultado(max, min, cant);
+        return resultado;
+    }
 
 
     /***

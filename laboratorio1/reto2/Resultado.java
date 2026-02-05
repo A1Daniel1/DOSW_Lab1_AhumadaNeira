@@ -1,5 +1,3 @@
-package reto2;
-
 public class Resultado {
     private int maximo;
     private int minimo;
