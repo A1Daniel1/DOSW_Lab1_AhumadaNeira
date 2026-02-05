@@ -8,7 +8,11 @@ public class CarreraParalela {
 
         CarreraParalela carrera = new CarreraParalela();
         carrera.calcularLista(numeros);
+        boolean esPar = carrera.cantidadEsPar(numeros);
+        System.out.println("La cantidad de números es par: " + esPar);
     }
+
+
 
 
     /***
@@ -65,4 +69,15 @@ public class CarreraParalela {
         String resultado = (numero % 2 == 0) ? "Es par" : "Es impar";
         System.out.println(resultado);
     }
+
+    /**
+     * calcular si la cantidad de datos es par
+     * @param numeros lista de numeros
+     * @return si la cantidad es par
+     */
+    public boolean cantidadEsPar(List<Integer> numeros) {
+        return obtenerCantidad(numeros) % 2 == 0;
+    }
+
+    
 }
