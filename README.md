@@ -78,3 +78,14 @@ Uno uso hashSet para organizar los datos y el otro un treeSet. Al
 final unimos todo en una sola estructura ordenada
 
 ---
+
+
+### Reto 6: La máquina de decisiones
+
+**Evidencia**
+
+**Descripción**
+
+Trabajamos un robot que recibe comandos los cuales dentro
+de la logica de nuestro codigo con un switch case y usando
+lambdas para su ejecución
