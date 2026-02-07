@@ -110,7 +110,7 @@ lambdas para su ejecución
 ## Preguntas Teoricas
 
 - ¿Cuál es la diferencia entre git merge y git rebase?
-
+git merge une dos ramas creando un commit de merge que conserva el historial completo tal como ocurrio mientras que git rebase reescribe el historial colocando los commits de una rama encima de otra como si se hubieran hecho en linea recta dejando un historial mas limpio
 
 - Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al
 hacer merge?
@@ -119,14 +119,21 @@ Se crea un conflicto, y el archivo queda con unas marcas especificas
 
 - ¿Cómo puedes ver gráficamente el historial de merges y ramas en
 consola?
+usando el comando
 
+```
+git log --oneline --graph --all
+```
+
+esto muestra el historial con ramas y merges de forma visual en la consola
 
 - Explica la diferencia entre un commit y un push.
 
 Un commit es como tomar una captura del codigo en el instante, un push en cambio es mandar esas capturas de un repositorio local a uno centrael
 
 - ¿Para qué sirven git stash y git pop?
-
+  
+git stash sirve para guardar temporalmente cambios no confirmados y dejar el working directory limpio sin hacer commit y git stash pop sirve para recuperar esos cambios guardados y aplicarlos nuevamente a la rama actual
 
 - ¿Qué diferencia hay entre HashMap y HashTable?
 
@@ -135,6 +142,7 @@ Un hashMap es mas rapido, permite nulls y hashTable es sincronizada y no permite
 - ¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional
 para llenar un mapa?
 
+permite escribir codigo mas corto y legible se integra con streams facilita un estilo funcional reduce errores comunes y permite definir facilmente claves valores y manejo de claves duplicadas
 
 - Si usas List con objetos y luego aplicas stream().map(), ¿qué tipo de
 operación estás haciendo?
@@ -142,6 +150,9 @@ operación estás haciendo?
 estamos aplicando programacion funcional, en donde estamos agarrando cada elemento de la lista y pasandole una funcion lambda dentro del map, para que haga algo con cada elemento
 
 - ¿Qué hace el método stream().filter() y qué retorna?
+
+  filter evalua cada elemento del stream con una condicion y retorna un nuevo stream que solo contiene los elementos que cumplen dicha condicion
+  
 - Describe el paso a paso de cómo crear una rama desde develop si
 es una funcionalidad nueva.
 
@@ -164,6 +175,7 @@ git checkout -b featureNuevo
 - ¿Cuál es la diferencia entre crear una rama con git branch y con git
 checkout -b?
 
+git branch solo crea la rama pero no cambia a ella mientras que git checkout -b crea la rama y automaticamente cambia a esa nueva rama en un solo paso
 
 - ¿Por qué es recomendable crear ramas feature/ para nuevas
 funcionalidades en lugar de trabajar en main directamente?
