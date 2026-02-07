@@ -64,3 +64,17 @@ al mezclar nuestras ramas
 Para este ejercicio planteamos dos diccionarios para guardar valores
 en una rama trabajamos con hashMap en la otra con hashTable. Al final
 los juntamos, resolvimos el conflicto e imprimimos el resultado
+
+---
+
+### Reto 5: Batalla de Conjuntos
+
+**Evidencia**
+
+**Descripción**
+
+Para este ejercicio mezclamos distintos tipos de estructuras de datos
+Uno uso hashSet para organizar los datos y el otro un treeSet. Al
+final unimos todo en una sola estructura ordenada
+
+---
