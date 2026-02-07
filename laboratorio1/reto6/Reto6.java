@@ -1,5 +1,4 @@
 
-import java.util.Map;
 
 public class Reto6 {
     public static void ejecutarComando(String comando) {
