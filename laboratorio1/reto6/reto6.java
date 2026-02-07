@@ -1,0 +1,38 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Reto6 {
+
+    private static final Map<String, Runnable> comandos = new HashMap<>();
+
+    static {
+        comandos.put("BROMEAR", () ->
+                System.out.println("La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio…"));
+
+        comandos.put("GRITAR", () ->
+                System.out.println("La máquina grita: ¡¡¡ALERTA DE STACK OVERFLOW!!!"));
+
+        comandos.put("SUSURRAR", () ->
+                System.out.println("La máquina susurra: Shhh… los bugs están dormidos"));
+
+        comandos.put("ANALIZAR", () ->
+                System.out.println("La máquina procesa: Analizando datos… resultado: ¡Eres increíble programando!"));
+    }
+
+    public static void ejecutarComando(String comando) {
+        Runnable accion = comandos.get(comando.toUpperCase());
+
+        if (accion != null) {
+            accion.run();
+        } else {
+            System.out.println("Comando no reconocido: " + comando);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== MÁQUINA DE DECISIONES ===\n");
+
+        ejecutarComando("SALUDAR");
+        ejecutarComando("DANZAR");
+    }
+}
