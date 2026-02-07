@@ -55,3 +55,12 @@ metodos para las cadenas, trabajamos respectivamente
 StringBuilder y StringBuffer. Y reslvimos un conflicto
 al mezclar nuestras ramas
 
+---
+### Reto 4: El tesoro de las llaves duplicadas
+
+**Evidencia** 
+
+**Descripción**
+Para este ejercicio planteamos dos diccionarios para guardar valores
+en una rama trabajamos con hashMap en la otra con hashTable. Al final
+los juntamos, resolvimos el conflicto e imprimimos el resultado
