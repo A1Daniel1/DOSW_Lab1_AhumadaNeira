@@ -109,22 +109,63 @@ lambdas para su ejecución
 
 ## Preguntas Teoricas
 
-- 1. ¿Cuál es la diferencia entre git merge y git rebase?
-- 2. Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al
+- ¿Cuál es la diferencia entre git merge y git rebase?
+
+
+- Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al
 hacer merge?
-- 3. ¿Cómo puedes ver gráficamente el historial de merges y ramas en
+
+Se crea un conflicto, y el archivo queda con unas marcas especificas
+
+- ¿Cómo puedes ver gráficamente el historial de merges y ramas en
 consola?
-- 4. Explica la diferencia entre un commit y un push.
-- 5. ¿Para qué sirven git stash y git pop?
-- 6. ¿Qué diferencia hay entre HashMap y HashTable?
-- 7. ¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional
+
+
+- Explica la diferencia entre un commit y un push.
+
+Un commit es como tomar una captura del codigo en el instante, un push en cambio es mandar esas capturas de un repositorio local a uno centrael
+
+- ¿Para qué sirven git stash y git pop?
+
+
+- ¿Qué diferencia hay entre HashMap y HashTable?
+
+Un hashMap es mas rapido, permite nulls y hashTable es sincronizada y no permite nulls
+
+- ¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional
 para llenar un mapa?
-- 8. Si usas List con objetos y luego aplicas stream().map(), ¿qué tipo de
+
+
+- Si usas List con objetos y luego aplicas stream().map(), ¿qué tipo de
 operación estás haciendo?
-- 9. ¿Qué hace el método stream().filter() y qué retorna?
-- 10. Describe el paso a paso de cómo crear una rama desde develop si
+
+estamos aplicando programacion funcional, en donde estamos agarrando cada elemento de la lista y pasandole una funcion lambda dentro del map, para que haga algo con cada elemento
+
+- ¿Qué hace el método stream().filter() y qué retorna?
+- Describe el paso a paso de cómo crear una rama desde develop si
 es una funcionalidad nueva.
-- 11.¿Cuál es la diferencia entre crear una rama con git branch y con git
+
+primero verificamos en que rama estamos
+```
+git branch -a
+```
+
+luego lo que hacemos es ir a develop si es que estamos en otra rama
+
+```
+git checkout develop
+```
+
+despues creamos la rama del feature y nos vamos a ella, lo podemos hacer con
+```
+git checkout -b featureNuevo
+```
+
+- ¿Cuál es la diferencia entre crear una rama con git branch y con git
 checkout -b?
-- 12.¿Por qué es recomendable crear ramas feature/ para nuevas
+
+
+- ¿Por qué es recomendable crear ramas feature/ para nuevas
 funcionalidades en lugar de trabajar en main directamente?
+
+Porque digamos que main es ya lo que esta en producción y pues cuando estamos implementando algo nuevo esto puede fallar, entonces la idea es evitar que eso pase. Separando la logica de lo que es el producto ya final del cliente, y lo que trabajamos los desarrolladores
