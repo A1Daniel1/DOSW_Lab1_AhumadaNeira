@@ -1,17 +1,18 @@
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
+public class reto4 {
+    public static void main(String[] args) {
+        /**
+         * main
+         */
+    }
 
-public class Reto4 {
+    public void almacenarHashMap(String metal, integer valor) {
+        HashMap<String, Integer> metales = new HashMap<String, Integer>();
 
-    public static Hashtable<String, Integer> crearMapa(List<Map.Entry<String, Integer>> datos) {
+        metales.putIfAbsent("oro", 4);
+        metales.putIfAbsent("plata", 3);
+        metales.putIfAbsent("oro", 7);
+        metales.putIfAbsent("diamante", 10);
 
-        Hashtable<String, Integer> tabla = new Hashtable<>();
-
-        for (Map.Entry<String, Integer> entrada : datos) {
-            tabla.putIfAbsent(entrada.getKey(), entrada.getValue());
-        }
-
-        return tabla;
+        System.out.println(metales);
     }
 }
